@@ -1,12 +1,7 @@
-var menu = document.querySelector('.burguer');
-var main = document.querySelector('main');
-var drawer = document.querySelector('.nav');
+var portfolio = document.querySelector('.ptfolio_item');
 
-menu.addEventListener('click', function(e) {
-	drawer.classList.toggle('open');
-	e.stopPropagation();
-});
+portfolio.onmousedown = function() {mouseDown()}
 
-main.addEventListener('click', function() {
-	drawer.classList.remove('open');
-});
+function mouseDown () {
+	document.getElementByClassName('.ptfolio_item').style.border = "2px solid blue";
+}

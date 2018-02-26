@@ -35,7 +35,7 @@ p {
   font-weight: 100;
 }
 
-/*Navbar styling at desktop size*/
+/* Navbar styling */
 .navbar {
   background-color: var(--udadarkblue);
   width: 100%;
@@ -48,7 +48,7 @@ p {
 }
 .udalogo {
   fill: white;
-  margin-left: 15px;
+  margin: 2px 0 0 15px;
   height: 100%;
 }
 .udalink:hover .udalogo {
@@ -70,7 +70,7 @@ p {
   color: var(--bluegrey);
 }
 
-/*Hero styling at desktop size*/
+/* Hero styling */
 .hero {
   background-color: var(--bluegrey);
   min-height: 510px;
@@ -83,6 +83,7 @@ p {
   flex-wrap: wrap;
   justify-content: space-around;
   align-content: center;
+  align-items: center;
 }
 .hero_pic {
   width: auto;
@@ -92,7 +93,7 @@ p {
   color: white;
 }
 
-/*Skills styling at desktop size*/
+/* Skills styling */
 .skills {
   background-color: var(--palegrey);
   min-height: 328px;
@@ -125,7 +126,7 @@ p {
   width: auto;
 }
 
-/*Portfolio styling at desktop size*/
+/* Portfolio styling */
 .ptfolio {
   background-color: white; 
   min-height: 612px;
@@ -151,20 +152,21 @@ p {
   box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
   display: flex;
   justify-content: center;
-  align-items: center; /* Had some issues centering the img inside the div but it seems that flexbox was the faster way to achieve it */
+  align-items: center;
 }
 .ptfolio_txt {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: -1;
 }
 .ptfolio_img {
   width: 100%;
   z-index: 2
 }
 
-/*Media query for laptops*/
+/* Media query for laptops */
 @media screen and (min-width: 1101px) {
   .ptfolio_item:hover .ptfolio_txt {
     z-index: 3;
@@ -177,22 +179,21 @@ p {
   }
 }
 
-/*Media query for tablets:
-changes portfolio div to fit screen and shows div text*/
+/* Media query for tablets:
+changes portfolio div to fit screen and shows div text */
 @media screen and (max-width: 1100px) {
 
   .ptfolio_item {
     height: 260px;
     width: 260px;
-    background-color: white;
     color: var(--udadarkblue);
-    border-radius: 7px;
-    box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
+    box-shadow: 3px 3px 15px 0 rgba(46, 61, 73, 0.2);
     position: relative;
   }
   .ptfolio_txt {
     position: absolute;
     width: 150px;
+    z-index: 3;
   }
   .ptfolio_img {
     border-bottom: 1px solid var(--udadarkblue);
@@ -203,8 +204,8 @@ changes portfolio div to fit screen and shows div text*/
   }
 }
 
-/*Media query for mobile:
-changes font-size in entire body and set portfolio display to vertical*/
+/* Media query for mobile:
+changes font-size in entire body and set portfolio display to vertical */
 @media screen and (max-width: 899px) {
 
   h1 {
@@ -250,8 +251,11 @@ changes font-size in entire body and set portfolio display to vertical*/
     flex-direction: column;
   }
   .ptfolio_item {
-    height: 328px;
-    width: 328px;
+    height: 250px;
+    width: 310px;
     margin-bottom: 20px;   
+  }
+  .ptfolio_txt {
+    margin-top: 30px;
   }
 }
