@@ -1,0 +1,16 @@
+/* TO PUT IN COMMENTS WHEN SUBMITTING! I spoke with a couple of UX people and, if one is searching portfolios for a professional venture, that search will be most likely done on desktop computers, hence the the original main css */
+
+/* the Nexus 5 is smaller than an iphone, therefore I optimized for iphone making sure that it works on smaller screens*/
+@media screen and (max-width: 420px) {
+
+}
+
+/* some people like to view websites while in landscape, therefore I optimized for ihpone 7 at the cost of an extra media query */
+@media screen and (min-width: 421px) and (max-width: 740px) {
+
+}
+
+/* for tablets ranging from small to ipad */
+@media screen and (min-width: 741px) and (max-width: 1024px) {
+
+}
