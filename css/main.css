@@ -35,6 +35,7 @@ p {
   font-weight: 100;
 }
 
+/*Navbar styling at desktop size*/
 .navbar {
   background-color: var(--udadarkblue);
   width: 100%;
@@ -45,17 +46,14 @@ p {
   justify-content: space-between;
   align-items: center;
 }
-
 .udalogo {
   fill: white;
   margin-left: 15px;
   height: 100%;
 }
-
 .udalink:hover .udalogo {
   fill: var(--bluegrey);
 }
-
 .nav_list {
   margin-right: 15px;
   padding: 0;
@@ -64,21 +62,19 @@ p {
   grid-template-columns: repeat(4, 20px);
   grid-gap: 15px 20px;
 }
-
 .fa-envelope, .fa-skype, .fa-linkedin, .fa-github {
   color: white;
   font-size: 20px;
 }
- 
-.fa-envelope:hover, .fa-skype:hover, .fa-linkedin:hover, .fa-github:hover {
+ .fa-envelope:hover, .fa-skype:hover, .fa-linkedin:hover, .fa-github:hover {
   color: var(--bluegrey);
 }
 
+/*Hero styling at desktop size*/
 .hero {
   background-color: var(--bluegrey);
   min-height: 510px;
 }
-
 .hero_content {
   min-height: 510px;
   width: calc(100% - 30px);
@@ -88,35 +84,31 @@ p {
   justify-content: space-around;
   align-content: center;
 }
-
 .hero_pic {
-  width: 400px;
+  width: auto;
 }
-
 .hero_intro {
-  max-width: 470px;
+  width: 450px;
   color: white;
 }
 
+/*Skills styling at desktop size*/
 .skills {
   background-color: var(--palegrey);
   min-height: 328px;
 }
-
 .skills_content {
   height: 100%;
   width: calc(100% - 30px);
   margin: auto;
   color: var(--udadarkblue);
 }
-
 .skills_list {
   padding-top: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-
 .skills_item {
   height: 130px;
   width: 130px;
@@ -124,44 +116,36 @@ p {
   justify-content: center;
   align-items: center; /* Had some issues centering the img inside the div but it seems that flexbox was the faster way to achieve it */
 }
-
-.skills_img {
-}
-
 .ht, .cs, .re, .js { /*html, css, react, javascript logos*/
   height: 81px;
   width: auto;
 }
-
 .jq { /*jquery logo*/
   height: 30px;
   width: auto;
 }
 
+/*Portfolio styling at desktop size*/
 .ptfolio {
   background-color: white; 
   min-height: 612px;
 }
-
 .ptfolio_content {
   height: 100%;
   width: calc(100% - 30px);
   margin: auto;
   color: var(--udadarkblue);
 }
-
 .ptfolio_list {
   padding-top: 20px;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
-
 .ptfolio_item {
   position: relative;
-  height: 370px;
-  width: 370px;
-  background-color: white;
+  height: 350px;
+  width: 350px;
   color: white;
   border-radius: 7px;
   box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
@@ -169,27 +153,105 @@ p {
   justify-content: center;
   align-items: center; /* Had some issues centering the img inside the div but it seems that flexbox was the faster way to achieve it */
 }
-
 .ptfolio_txt {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .ptfolio_img {
-  width: 350px;
+  width: 100%;
   z-index: 2
 }
 
-.ptfolio_item:hover .ptfolio_txt {
-  z-index: 3;
+/*Media query for laptops*/
+@media screen and (min-width: 1101px) {
+  .ptfolio_item:hover .ptfolio_txt {
+    z-index: 3;
+  }
+  .ptfolio_item:hover .ptfolio_img {
+    opacity: 0.1;
+  }
+  .ptfolio_item:hover {
+    background-color: var(--udadarkblue);
+  }
 }
 
-.ptfolio_item:hover .ptfolio_img {
-  opacity: 0.1;
+/*Media query for tablets:
+changes portfolio div to fit screen and shows div text*/
+@media screen and (max-width: 1100px) {
+
+  .ptfolio_item {
+    height: 260px;
+    width: 260px;
+    background-color: white;
+    color: var(--udadarkblue);
+    border-radius: 7px;
+    box-shadow: 5px 5px 25px 0 rgba(46, 61, 73, 0.2);
+    position: relative;
+  }
+  .ptfolio_txt {
+    position: absolute;
+    width: 150px;
+  }
+  .ptfolio_img {
+    border-bottom: 1px solid var(--udadarkblue);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
 }
 
-.ptfolio_item:hover {
-  background-color: var(--udadarkblue);
+/*Media query for mobile:
+changes font-size in entire body and set portfolio display to vertical*/
+@media screen and (max-width: 899px) {
+
+  h1 {
+    font-size: 24px;
+    font-weight: 400;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 300;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: 400;
+    margin-top: 0;
+    padding-top: 60px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 30px;
+    font-weight: 100;
+  }
+
+  .skills_list {
+    margin-top: 30px;
+  }
+  .skills_item {
+    height: 50px;
+    width: 50px;
+  }
+  .ht, .cs, .re, .js { 
+    height: 100%;
+    width: auto;
+  }
+  .jq { 
+    height: 12px;
+    width: auto;
+  }
+
+  .ptfolio_list {
+    flex-direction: column;
+  }
+  .ptfolio_item {
+    height: 328px;
+    width: 328px;
+    margin-bottom: 20px;   
+  }
 }
