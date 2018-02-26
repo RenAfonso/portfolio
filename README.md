@@ -1,4 +1,4 @@
-#Portfolio of Renato Afonso
+# Portfolio of Renato Afonso
 
 This is a simple portfolio for Udacity's front-end web development nanodegree.
 
@@ -21,34 +21,34 @@ Two main files, index.html and main.css, and the needed pictures to build the si
 All links open in a new tab.
 
 
-####Navbar
+#### Navbar
 
 An inline vector was used for the Udacity logo. Using an external link for this SVG logo wouldn't allow to change the SVG's `fill` so there was no other way but to place it in the HTML.
 
 For the small icons that allow direct contact (i.e. mail, skype, linkedin and github), [Font Awesome](https://fontawesome.com/) was used.
 
 
-####Hero
+#### Hero
 
 The picture is a .png and for smaller screen sizes, a smaller file is used, optmizing load times.
 
 
-####Skills
+#### Skills
 
 The logos have no effect on hover, so external links were written in HTML.
 
 
-####Portfolio
+#### Portfolio
 
 Project title is visible on hover for laptops. Smaller sizes display title by reducing image size so `srcset`was used.
 
 
-###Style
+### Style
 
 I was looking for a minimal look with the Udacity's colors. The `palegrey`was obtained using [Adobe Colors CC](https://color.adobe.com/pt/create/color-wheel/) from the original colors.
 
 
-###Future features
+### Future features
 
 1. Reshape the navbar to remove the udacity text in order to allow larger icons.
 2. Add effects on mousedown with JavaScript when clicking a portfolio project.
