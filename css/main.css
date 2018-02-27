@@ -186,6 +186,14 @@ p {
 
 /* Media query for laptops */
 @media screen and (min-width: 1101px) {
+  .nav_logo {
+    margin-left: 8%;
+  }
+
+  .nav_list {
+    margin-right: 8%;
+  }
+
   .ptfolio_item:hover .ptfolio_txt {
     z-index: 3;
   }
@@ -202,6 +210,14 @@ p {
 /* Media query for tablets:
 changes portfolio div to fit screen and shows div text */
 @media screen and (max-width: 1100px) {
+
+  .nav_logo {
+    margin-left: 5%;
+  }
+
+  .nav_list {
+    margin-right: 5%;
+  }
 
   .ptfolio_item {
     height: 260px;
